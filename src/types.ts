@@ -1,0 +1,18 @@
+import { LovelaceCard, LovelaceCardConfig, LovelaceCardEditor } from 'custom-card-helpers';
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'bvotd-card-editor': LovelaceCardEditor;
+    'hui-error-card': LovelaceCard;
+  }
+}
+
+// TODO Add your configuration elements here for type-checking
+export interface BVOTDCardConfig extends LovelaceCardConfig {
+  type: string;
+  name?: string;
+  title?: string;
+  style?: string;
+  titleStyle?: string;
+  verse?: number;
+}
